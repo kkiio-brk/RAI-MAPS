@@ -1,0 +1,133 @@
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px transparent; 
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent; 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent; 
+}
+
+
+.maps-container{
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.maps-slider{
+  position:absolute;
+  top:0; left: 0; 
+  right: 0;
+  bottom: 0; 
+  display: flex; 
+  align-content: center;
+  align-items: center;
+}
+
+.carousel-map-item{
+  height: 100%; 
+  /*display: flex;
+  align-items: center;*/
+}
+
+.carousel-map-item img{
+  height: fit-content;
+}
+
+.map-description{
+  height: 100%;
+  z-index: 1000;
+  overflow: scroll;
+  background-color: "#6a6a6a80";
+  opacity: 1;
+}
+
+.map-description p{
+  margin-bottom: 0;
+}
+
+.image-map{
+    background-color: none;
+}
+
+.description-text{
+    padding-left:4rem ;
+    padding-right: 4rem;
+    height: 100%;
+    /*min-height: 90% !important;
+    max-height: 90% !important;*/
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.d-text{
+    max-width: 50% !important;
+    background-color: rgba(255, 255, 255, 0.445);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid #93939373;
+    border-radius: 0.5rem;
+}
+@media (max-width: 768px) {
+
+  .description-text{
+    padding-left:1rem ;
+    padding-right: 1rem;
+  }
+    .d-text{
+        max-width: 95% !important;
+        width: 100%;
+    }
+}
+
+
+
+.carousel-fade .carousel-item {
+	opacity: 0;
+	transition-duration: .6s;
+	transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+	opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+	opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+	transform: translateX(0);
+	transform: translate3d(0, 0, 0);
+}
